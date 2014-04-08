@@ -1,4 +1,4 @@
-meteor-accounts-merge-app
+accounts-merge example
 =========================
 
 This is an example implementation of the Meteor [accounts-merge package](https://github.com/lirbank/meteor-accounts-merge).
