@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "accounts-merge": {}
+    },
+    "packages": {
+      "accounts-merge": {
+        "git": "https://github.com/lirbank/meteor-accounts-merge.git",
+        "tag": "v0.0.2",
+        "commit": "f71ece342e9701c1360afedef0fd0894187670d4"
+      }
+    }
+  }
+}
