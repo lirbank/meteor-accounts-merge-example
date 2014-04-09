@@ -1,36 +1,36 @@
 <head>
-	<title>accounts-merge</title>
+  <title>accounts-merge</title>
 </head>
 
 <body>
-	{{> signIn}}
+  {{> signIn}}
 </body>
 
 <template name="signIn">
-	<h1>accounts-merge</h1>
+  <h1>accounts-merge</h1>
 
-	{{#if currentUser.services.facebook}}
-		<button id="login-facebook" disabled>Facebook</button>
-	{{else}}
-		<button id="login-facebook">Facebook</button>
-	{{/if}}
+  {{#if currentUser.services.facebook}}
+    <button id="login-facebook" disabled>Facebook</button>
+  {{else}}
+    <button id="login-facebook">Facebook</button>
+  {{/if}}
 
-	{{#if currentUser.services.google}}
-		<button id="login-google" disabled>Google</button>
-	{{else}}
-		<button id="login-google">Google</button>
-	{{/if}}
+  {{#if currentUser.services.google}}
+    <button id="login-google" disabled>Google</button>
+  {{else}}
+    <button id="login-google">Google</button>
+  {{/if}}
 
-	{{#if currentUser.services.twitter}}
-		<button id="login-twitter" disabled>Twitter</button>
-	{{else}}
-		<button id="login-twitter">Twitter</button>
-	{{/if}}
+  {{#if currentUser.services.twitter}}
+    <button id="login-twitter" disabled>Twitter</button>
+  {{else}}
+    <button id="login-twitter">Twitter</button>
+  {{/if}}
 
-	{{#if currentUser}}
-		<button id="logout">Logout</button>
-	{{else}}
-		<button id="logout" disabled>Logout</button>
-	{{/if}}
+  {{#if currentUser}}
+    <button id="logout">Logout</button>
+  {{else}}
+    <button id="logout" disabled>Logout</button>
+  {{/if}}
 
 </template>
