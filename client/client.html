@@ -27,6 +27,12 @@
     <button id="login-twitter">Twitter</button>
   {{/if}}
 
+  {{#if currentUser.services.github}}
+    <button id="login-github" disabled>Github</button>
+  {{else}}
+    <button id="login-github">Github</button>
+  {{/if}}
+
   {{#if currentUser}}
     <button id="logout">Logout</button>
   {{else}}
