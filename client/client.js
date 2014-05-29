@@ -84,6 +84,34 @@ Template.signIn.events({
     e.preventDefault();
   },
 
+  // Sign in, sign up or merge Github login service
+  'click button#login-github': function (e) {
+    Meteor.signInWithGithub ({}, function (error, mergedUserId) {
+      if (error) {
+        console.log('error', error);
+      }
+
+      // mergedUserId is set if a merge occured
+      if (mergedUserId) {
+        console.log('mergedUserId', mergedUserId);
+
+        // The source account (mergedUserId) has now been deleted, so now is
+        // your chance to deal with you application specific DB items to avoid
+        // ending up with orphans. You'd typically want to change owner on the
+        // items beloning to the deleted user, or simply delete them.
+        Meteor.call ('mergeItems', mergedUserId, function (error, result) {
+          if (error) {
+            console.log('error', error);
+          }
+          if (result) {
+            console.log('result', result);
+          }
+        });
+      }
+    });
+    e.preventDefault();
+  },
+
   // Logout
   'click button#logout': function (e) {
     Meteor.logout(function (error) {

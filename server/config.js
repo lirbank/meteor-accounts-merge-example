@@ -3,7 +3,7 @@ Meteor.startup( function () {
 
   // Remove configuration entries in case service is already configured
   ServiceConfiguration.configurations.remove({
-    $or: [ {service: "facebook"}, {service: "twitter"}, {service: "google"} ]
+    $or: [ {service: "facebook"}, {service: "twitter"}, {service: "google"}, {service: "github"} ]
   });
 
   // Add Facebook configuration entry
@@ -25,6 +25,13 @@ Meteor.startup( function () {
     "service": "twitter",
     "consumerKey": "bRUlh8SiAom7IaJAkZsCE59A6",
     "secret": "clTdriNZDlGvqmWyAEG6TxuDgbNd5MSavtjzbfjgnFbT7lHZDH"
+  });
+
+  // Add Github configuration entry
+  ServiceConfiguration.configurations.insert({
+    "service": "github",
+    "clientId": "YOUR-CLIENT-ID",
+    "secret": "YOUR-SECRET"
   });
 
 });
