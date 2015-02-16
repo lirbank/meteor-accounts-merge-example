@@ -9,7 +9,7 @@ Template.signIn.events({
 
       // mergedUserId is set if a merge occured
       if (mergedUserId) {
-        console.log('mergedUserId', mergedUserId);
+        console.log(mergedUserId, 'merged with', Meteor.userId());
 
         // The source account (mergedUserId) has now been deleted, so now is
         // your chance to deal with you application specific DB items to avoid
@@ -37,7 +37,7 @@ Template.signIn.events({
 
       // mergedUserId is set if a merge occured
       if (mergedUserId) {
-        console.log('mergedUserId', mergedUserId);
+        console.log(mergedUserId, 'merged with', Meteor.userId());
 
         // The source account (mergedUserId) has now been deleted, so now is
         // your chance to deal with you application specific DB items to avoid
@@ -65,7 +65,7 @@ Template.signIn.events({
 
       // mergedUserId is set if a merge occured
       if (mergedUserId) {
-        console.log('mergedUserId', mergedUserId);
+        console.log(mergedUserId, 'merged with', Meteor.userId());
 
         // The source account (mergedUserId) has now been deleted, so now is
         // your chance to deal with you application specific DB items to avoid

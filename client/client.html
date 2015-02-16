@@ -1,5 +1,5 @@
 <head>
-  <title>accounts-merge</title>
+  <title>accounts-merge-example</title>
 </head>
 
 <body>
@@ -7,7 +7,7 @@
 </body>
 
 <template name="signIn">
-  <h1>accounts-merge</h1>
+  <h1>accounts-merge-example</h1>
 
   {{#if currentUser.services.facebook}}
     <button id="login-facebook" disabled>Facebook</button>
@@ -32,5 +32,9 @@
   {{else}}
     <button id="logout" disabled>Logout</button>
   {{/if}}
+
+  <br>
+  <br>
+  <div>The current user is: {{currentUser._id}}</div>
 
 </template>
