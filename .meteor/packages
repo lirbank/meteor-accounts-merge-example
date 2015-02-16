@@ -10,4 +10,4 @@ service-configuration
 accounts-twitter
 accounts-facebook
 accounts-google
-accounts-merge
+mikael:accounts-merge
